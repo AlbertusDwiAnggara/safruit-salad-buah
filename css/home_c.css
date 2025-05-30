@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+/* Mengatur tampilan halaman utama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../img/bg_fruits.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(254, 91, 41, 0.761);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000; /* Pastikan header di atas konten lain */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-deskripsi {
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 500;
+    color: white;
+    font-size: 1.1em;
+    user-select: none;
+}
+
+/* Navigasi */
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #ffa514;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation a:hover {
+    color: #ffa514;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: white;
+    color: #162938;
+}
+
+/* Bagian Welcome */
+.intro {
+    background: url('img/salad_buah_bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;    padding: 100px 20px 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro h1 {
+    margin-top: 50px;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.intro p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.intro button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff7f50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.intro button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+
+/* Bagian Produk Unggulan */
+.highlight-produk {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.highlight-produk h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6347;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.produk {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produk:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.produk img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.produk img:hover {
+    transform: scale(1.05);
+}
+
+.produk h3 {
+    margin: 20px 0 10px;
+    color: #ff6347;
+}
+
+.produk p {
+    color: #666;
+}
+
+/* Bagian Testimoni */
+.testimoni {
+    background-color: #ff7f50;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimoni h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.testimoni-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.testimoni-item {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimoni-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.testimoni-item p {
+    font-style: italic;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Bagian Promo */
+.promo {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.promo h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff6347;
+}
+
+.promo p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ffa514;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation {
+        margin-top: 10px;
+    }
+
+    .navigation a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .navigation .btnLogin-popup {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .produk, .testimoni-item {
+        width: 45%;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .produk, .testimoni-item {
+        width: 100%;
+    }
+
+    .navigation a {
+        margin: 5px 0;
+    }
+
+    .navigation .btnLogin-popup {
+        width: 100%;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+/* Mengatur tampilan halaman utama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(254, 91, 41, 0.761);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-deskripsi {
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 500;
+    color: white;
+    font-size: 1.1em;
+    user-select: none;
+}
+
+/* Navigasi */
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #ffa514;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation a:hover {
+    color: #ffa514;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: white;
+    color: #162938;
+}
+
+/* Introduction Section */
+.intro {
+    padding: 100px 20px 50px 20px;
+    /* Menambahkan padding atas besar untuk menghindari tumpang tindih dengan header */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-section {
+    max-width: 800px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.about-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ff6347;
+    /* Warna aksen */
+}
+
+.about-section p,
+.about-section ul {
+    font-size: 1em;
+    color: #555;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    background: url('img/check-icon.png') no-repeat left center;
+    padding-left: 30px;
+    margin: 10px 0;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.about-section ul li:hover {
+    color: #ff6347;
+}
+
+/* Bahan-Bahan Salad Buah Section */
+.bahan-bahan {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.bahan-bahan h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 40px;
+}
+
+.bahan-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bahan-item {
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.bahan-item:hover {
+    transform: translateY(-10px);
+}
+
+.bahan-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.bahan-item img:hover {
+    transform: scale(1.05);
+}
+
+.bahan-item h4 {
+    font-size: 1.2em;
+    color: #ff6347;
+    margin-bottom: 5px;
+}
+
+.bahan-item p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Keunggulan Produk Section */
+.keunggulan {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.keunggulan h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 40px;
+}
+
+.keunggulan ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.keunggulan ul li {
+    background: url('img/check-icon.png') no-repeat left center;
+    padding-left: 30px;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.keunggulan ul li:hover {
+    color: #ff6347;
+}
+
+/* Proses Pembuatan Section */
+.proses-pembuatan {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.proses-pembuatan h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 40px;
+}
+
+.proses-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.proses-step {
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.proses-step:hover {
+    transform: translateY(-10px);
+}
+
+.proses-step img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.proses-step img:hover {
+    transform: scale(1.05);
+}
+
+.proses-step h4 {
+    font-size: 1.2em;
+    color: #ff6347;
+    margin-bottom: 5px;
+}
+
+.proses-step p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Sustainability Section */
+.sustainability {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.sustainability h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.sustainability p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+.sustainability img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.sustainability img:hover {
+    transform: scale(1.05);
+}
+
+/* Galeri Foto Section */
+.galeri-foto {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.galeri-foto h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 40px;
+}
+
+.galeri-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.galeri-item {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.galeri-item:hover {
+    transform: scale(1.05);
+}
+
+.galeri-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: rgba(65, 65, 65, 0.8);
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: #ffa514;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation {
+        margin-top: 10px;
+    }
+
+    .navigation a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .navigation .btnLogin-popup {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .bahan-item,
+    .proses-step,
+    .galeri-item,
+    .testimoni-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .bahan-item,
+    .proses-step,
+    .galeri-item,
+    .testimoni-item {
+        width: 100%;
+    }
+
+    .navigation a {
+        margin: 5px 0;
+    }
+
+    .navigation .btnLogin-popup {
+        width: 100%;
+    }
+}

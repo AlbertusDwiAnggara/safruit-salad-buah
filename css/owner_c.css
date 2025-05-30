@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+/* Mengatur tampilan halaman utama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(254, 91, 41, 0.761);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000; /* Pastikan header di atas konten lain */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-deskripsi {
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 500;
+    color: white;
+    font-size: 1.1em;
+    user-select: none;
+}
+
+/* Navigasi */
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #ffa514;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation a:hover {
+    color: #ffa514;
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: white;
+    color: #162938;
+}
+
+/* Owner Section */
+.owner-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.owner-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6347;
+}
+
+.owner-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.owner-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.owner-details {
+    max-width: 600px;
+    text-align: left;
+}
+
+.owner-details h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff6347;
+}
+
+.owner-details p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.owner-details h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ff6347;
+}
+
+.owner-details p strong {
+    color: #333;
+}
+
+/* Kisah Bisnis */
+.business-story {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.business-story h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6347;
+}
+
+.business-story p {
+    color: #666;
+    font-size: 1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Alamat dan Lokasi */
+.location-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.location-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff6347;
+}
+
+.location-section p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.location-section p:last-of-type {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ffa514;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Filter Buttons (Optional) */
+.filter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #ff4500;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navigation {
+        margin-top: 10px;
+    }
+
+    .navigation a {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .navigation .btnLogin-popup {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .owner-profile {
+        flex-direction: column;
+    }
+
+    .owner-img {
+        width: 80%;
+    }
+
+    .owner-details {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .owner-img {
+        width: 100%;
+    }
+
+    .navigation a {
+        margin: 5px 0;
+    }
+
+    .navigation .btnLogin-popup {
+        width: 100%;
+    }
+}
