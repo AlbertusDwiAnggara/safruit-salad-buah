@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safruit'z | Products</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/owner_c.css">
+
+    <!-- Menambahkan favicon -->
+    <link rel="icon" type="image/png" href="img/logo_safuitz.png">
+</head>
+
+<body>
+    <!-- Header dan Navigasi -->
+    <header>
+        <div class="logo-container">
+            <img src="img/logo_safuitz.png" alt="Logo Safruit'z" class="logo" data-aos="fade-right" data-aos-delay="50">
+            <p class="logo-deskripsi" data-aos="fade-right" data-aos-delay="50">Salad Buah - Segar, Sehat, dan Alami</p>
+        </div>
+        <nav class="navigation">
+            <a href="nvg_home.html" data-aos="fade-down" data-aos-delay="100">Home</a>
+            <a href="nvg_about.html" data-aos="fade-down" data-aos-delay="200">About</a>
+            <a href="nvg_product.html" data-aos="fade-down" data-aos-delay="300">Product'z</a>
+            <a href="nvg_owner.html" data-aos="fade-down" data-aos-delay="400">Owner</a>
+            <button class="btnLogin-popup" onclick="window.location.href='index.html'">Login</button>
+        </nav>
+    </header>
+
+    <!-- Owner Section -->
+    <section class="owner-section" data-aos="fade-up">
+        <h2>Tentang Pemilik</h2>
+        <div class="owner-profile">
+            <img src="img/owner_photo.jpg" alt="Foto Pemilik" class="owner-img" data-aos="fade-right">
+            <div class="owner-details" data-aos="fade-left">
+                <h3>Nama Pemilik</h3>
+                <p>Albertus Dwi Anggara, S.Pd.
+                </p>
+                <h4>Visi dan Misi</h4>
+                <p><strong>Visi:</strong> Menjadi penyedia salad buah terbaik dengan kualitas dan layanan prima.</p>
+                <p><strong>Misi:</strong> Menyajikan buah-buahan segar dan sehat dengan kombinasi rasa yang unik dan
+                    menarik.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kisah Bisnis -->
+    <section class="business-story" data-aos="fade-up">
+        <h2>Kisah Bisnis</h2>
+        <p>Safruit'z didirikan pada tahun 2020 dengan tujuan menyediakan salad buah yang tidak hanya lezat tetapi juga
+            sehat. Dengan komitmen pada kualitas dan inovasi, kami terus berkembang dan melayani pelanggan kami dengan
+            penuh dedikasi.</p>
+    </section>
+
+    <!-- Alamat dan Lokasi -->
+    <section class="location-section" data-aos="fade-up">
+        <h2>Alamat Kami</h2>
+        <p>Jl. Tandes, Surabaya, Indonesia</p>
+        <!-- Integrasi Google Maps -->
+        <div class="map-container" data-aos="zoom-in">
+            <iframe
+                src="https://www.google.com/maps/place//@-7.2664926,112.6656861,17.45z?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p>Jam Operasional: Senin - Jumat | 08:00 - 20:00</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Hubungi kami di 0852-3541-3713 atau kunjungi kami di Instagram <a
+                href="https://instagram.com/safruitz">@safruitz</a></p>
+    </footer>
+
+    <!-- Ionicons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true, // Animasi hanya terjadi sekali saat scroll
+        });
+    </script>
+
+    <!-- JavaScript Eksternal -->
+    <script src="js/owner_script.js"></script>
+</body>
+
+</html>

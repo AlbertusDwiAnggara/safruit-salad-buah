@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safruit'z | Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/home_c.css">
+    <!-- Menambahkan favicon -->
+    <link rel="icon" type="image/png" href="img/logo_safuitz.png">
+</head>
+
+<body>
+    <!-- Header dan Navigasi -->
+    <header>
+        <div class="logo-container">
+            <img src="img/logo_safuitz.png" alt="Logo Safruit'z" class="logo" data-aos="fade-right" data-aos-delay="50">
+            <p class="logo-deskripsi" data-aos="fade-right" data-aos-delay="50">Salad Buah - Segar, Sehat, dan Alami</p>
+        </div>
+        <nav class="navigation">
+            <a href="nvg_home.html" data-aos="fade-down" data-aos-delay="100">Home</a>
+            <a href="nvg_about.html" data-aos="fade-down" data-aos-delay="200">About</a>
+            <a href="nvg_product.html" data-aos="fade-down" data-aos-delay="300">Product'z</a>
+            <a href="nvg_owner.html" data-aos="fade-down" data-aos-delay="400">Owner</a>
+            <button class="btnLogin-popup" onclick="window.location.href='index.html'">Login</button>
+        </nav>
+    </header>
+
+
+    <!-- Section Selamat Datang -->
+    <section class="intro" data-aos="fade-up">
+        <h1>Selamat Datang di Safruit'z</h1>
+        <p>Salad Buah Segar, Sehat, dan Alami</p>
+        <a href="index.html"><button>Order Now</button></a>
+    </section>
+
+    <!-- Produk Unggulan -->
+    <section class="highlight-produk" data-aos="fade-up">
+        <h2>Produk Unggulan Kami</h2>
+        <div class="produk-grid">
+            <div class="produk" data-aos="zoom-in" data-aos-delay="100">
+                <img src="img/salad1.jpeg" alt="Salad Buah Premium">
+                <h3>Salad Buah Premium</h3>
+                <p>Kombinasi buah segar terbaik dengan topping pilihan.</p>
+            </div>
+            <div class="produk" data-aos="zoom-in" data-aos-delay="200">
+                <img src="img/salad2.jpg" alt="Salad Buah Mix">
+                <h3>Salad Buah Mix</h3>
+                <p>Campuran buah segar favorit dengan saus yogurt.</p>
+            </div>
+            <div class="produk" data-aos="zoom-in" data-aos-delay="300">
+                <img src="img/salad3.jpg" alt="Salad Buah Eksotis">
+                <h3>Salad Buah Eksotis</h3>
+                <p>Buah-buahan dan jeli yang menyehatkan dan menyegarkan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Pelanggan -->
+    <section class="testimoni" data-aos="fade-up">
+        <h2>Apa Kata Pelanggan?</h2>
+        <div class="testimoni-container">
+            <div class="testimoni-item" data-aos="fade-up" data-aos-delay="100">
+                <p>"Salad buah dari Safruit'z benar-benar segar dan sehat! Pasti akan pesan lagi." - Andi</p>
+            </div>
+            <div class="testimoni-item" data-aos="fade-up" data-aos-delay="200">
+                <p>"Kualitas buahnya luar biasa dan pelayanan sangat cepat." - Siti</p>
+            </div>
+            <div class="testimoni-item" data-aos="fade-up" data-aos-delay="300">
+                <p>"Sangat cocok untuk acara keluarga, salad Safruit'z selalu jadi favorit!" - Budi</p>
+            </div>
+            <div class="testimoni-item" data-aos="fade-up" data-aos-delay="300">
+                <p>"Sangat cocok untuk acara keluarga, salad Safruit'z selalu jadi favorit!" - A</p>
+            </div>
+            <div class="testimoni-item" data-aos="fade-up" data-aos-delay="300">
+                <p>"Sangat cocok untuk acara keluarga, salad Safruit'z selalu jadi favorit!" - B</p>
+            </div>
+            <div class="testimoni-item" data-aos="fade-up" data-aos-delay="300">
+                <p>"Sangat cocok untuk acara keluarga, salad Safruit'z selalu jadi favorit!" - C</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Penawaran Spesial -->
+    <section class="promo" data-aos="fade-up">
+        <h2>Penawaran Spesial</h2>
+        <p>Diskon 10% untuk pembelian pertama! Gunakan kode: safruitz</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Hubungi kami di 0852-3541-3713 atau kunjungi kami di Instagram <a href="https://instagram.com/safruitz">@safruitz</a></p>
+    </footer>
+
+    <!-- Ionicons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true, // Animasi hanya terjadi sekali saat scroll
+        });
+    </script>
+</body>
+
+</html>
